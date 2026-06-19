@@ -1,0 +1,6 @@
+[project]
+name = "good-project"
+version = "1.0.0"
+license = "MIT"
+[project.scripts]
+good = "good_project.cli:main"

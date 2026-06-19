@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Craft build artifacts
+*.snap
+*.rock
+parts/
+prime/
+stage/
+
+# Debian build artifacts
+debian/.debhelper/
+debian/files
+debian/pkg-inspector/
+debian/*.debhelper.log
+debian/*.substvars
+../pkg-inspector_*.deb
+../pkg-inspector_*.buildinfo
+../pkg-inspector_*.changes

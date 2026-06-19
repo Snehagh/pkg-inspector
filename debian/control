@@ -1,0 +1,21 @@
+Source: pkg-inspector
+Section: utils
+Priority: optional
+Maintainer: Sneha Ghosh <snehaghoshus2024@gmail.com>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-setuptools
+Standards-Version: 4.6.2
+Homepage: https://github.com/Snehagh/pkg-inspector
+Rules-Requires-Root: no
+
+Package: pkg-inspector
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Description: assess how ready a project is to be packaged and distributed
+ pkg-inspector analyses a project directory and produces a packaging
+ readiness report. It checks for pyproject.toml, license clarity, tests,
+ CI configuration, dependency pinning and declared entry points, then
+ prints a weighted 0-100 score. A --min-score flag makes it usable as a
+ CI gate.

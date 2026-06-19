@@ -1,0 +1,23 @@
+name: pkg-inspector
+# Rocks are OCI-compliant container images based on Ubuntu, built with the same
+# Craft Parts lifecycle as snaps and charms.
+base: ubuntu@24.04
+version: "0.1.0"
+summary: Assess how ready a project is to be packaged and distributed.
+description: |
+  An OCI image bundling the pkg-inspector CLI. Note the conceptual mismatch:
+  rocks are designed around Pebble and long-running services, whereas this is a
+  one-shot CLI. The image is therefore most useful in CI, where you mount a repo
+  and run the tool against it. See PACKAGING.md for the run command.
+license: MIT
+
+platforms:
+  amd64:
+  arm64:
+
+parts:
+  pkg-inspector:
+    plugin: python
+    source: .
+    stage-packages:
+      - python3-venv

@@ -1,0 +1,34 @@
+name: pkg-inspector
+base: core24
+version: "0.1.0"
+summary: Assess how ready a project is to be packaged and distributed.
+description: |
+  pkg-inspector analyses a project directory and produces a packaging
+  readiness report: it checks for pyproject.toml, license clarity, tests,
+  CI configuration, dependency pinning, declared entry points and more,
+  then prints a weighted 0-100 score. A --min-score flag makes it usable
+  as a CI gate.
+
+grade: stable
+# Strict confinement is the right default. The `home` interface (auto-connected)
+# lets the tool read project directories under the user's $HOME. The tradeoff,
+# worth understanding: a strictly confined snap CANNOT read arbitrary paths like
+# /opt or another user's directory. For a dev tool that is an acceptable limit;
+# reaching for `classic` confinement to read anywhere would require a manual
+# store review and is the wrong tool for this job.
+confinement: strict
+
+platforms:
+  amd64:
+  arm64:
+
+parts:
+  pkg-inspector:
+    plugin: python
+    source: .
+
+apps:
+  pkg-inspector:
+    command: bin/pkg-inspector
+    plugs:
+      - home
