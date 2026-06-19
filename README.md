@@ -15,14 +15,13 @@ Packaging Readiness Report
   ✓ README: README found.
   ✓ tests: A tests directory is present.
   ✓ CI workflow: A CI workflow is configured.
-  ✓ dependency pinning: Pinned/locked dependencies found.
+  ✓ dependency pinning: No runtime dependencies declared; pinning is not required.
   ✓ entry points: Declares console entry point(s): pkg-inspector.
   ✓ .gitignore: .gitignore found.
   ✓ version control: Under git version control.
 
   10 passed, 0 warnings, 0 failed
   Overall score: 100/100
-```
 
 This repository doubles as a packaging study: the same tool is packaged as a
 **snap**, a **rock** (OCI image), and a **Debian package**, with the tradeoffs
