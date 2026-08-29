@@ -42,7 +42,7 @@ pkg-inspector analyze .
 
 ## How-to
 
-Analyze another project:
+Analyze another project:    
 
 ```bash
 pkg-inspector analyze /path/to/project
