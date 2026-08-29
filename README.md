@@ -2,7 +2,7 @@
 
 A small, dependency-free Python CLI that assesses how ready a project is to be
 **packaged and distributed**. It inspects a project directory and prints a
-weighted readiness score with actionable findings.
+weighted readiness score with actionable findings. 
 
 ```text
 $ pkg-inspector analyze .
